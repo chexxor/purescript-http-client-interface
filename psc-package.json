@@ -1,0 +1,19 @@
+{
+    "name": "purescript-sql-desired-state",
+    "set": "psc-0.11.6",
+    "source": "https://github.com/purescript/package-sets.git",
+    "depends": [
+        "typelevel-prelude",
+        "maybe",
+        "monoid",
+        "these",
+        "maps",
+        "tuples",
+        "partial",
+        "newtype",
+        "psci-support",
+        "console",
+        "eff",
+        "prelude"
+    ]
+}

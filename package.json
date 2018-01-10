@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "install-deps": "psc-package install",
+    "clean": "rimraf output && rimraf .pulp-cache",
+    "repl": "psc-package sources | xargs purs repl 'src/**/*.purs' 'test/**/*.purs' 'github.com/**/*.purs'",
+    "build": "psc-package sources | xargs purs compile 'src/**/*.purs' 'github.com/**/*.purs'",
+    "test": "psc-package sources | xargs purs compile 'src/**/*.purs' 'github.com/**/*.purs' 'test/**/*.purs' && NODE_PATH=output:$NODE_PATH node -e \"require('Test.Main').main()\""
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "pulp": "^11.0.x",
+    "purescript-psa": "^0.5.x",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "pg": "^7.4.0"
+  }
+}
